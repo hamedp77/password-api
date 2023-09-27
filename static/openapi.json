@@ -92,13 +92,43 @@
                                             "description": "Whether request was successfull"
                                         }
                                     },
-                                "example": {
+                                    "example": {
                                         "pws": [
                                             "h?U)6gT2r|H[",
                                             "B!o@&#!7M4fl",
                                             ";/zTlB}vp3D8"
                                         ],
                                         "success": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "errors": {
+                                            "type": "string",
+                                            "description": "List of passwords"
+                                        },
+                                        "description": {
+                                            "type": "string",
+                                            "description": "List of passwords"
+                                        },
+                                        "success": {
+                                            "type": "boolean",
+                                            "default": false,
+                                            "description": "Whether request was successfull"
+                                        }
+                                    },
+                                    "example": {
+                                        "error": "400 Bad Request",
+                                        "description": "count must be folan",
+                                        "success": false
                                     }
                                 }
                             }
