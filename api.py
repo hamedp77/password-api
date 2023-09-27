@@ -31,13 +31,13 @@ def default():
     length = request.args.get('length', type=int, default=8)
     count = request.args.get('count', type=int, default=1)
     use_digits = False if request.args.get(
-        'use_digits', default='true').lower() == 'false' else True
+        'use_digits', default='true').lower() in ('false', '0') else True
     use_symbols = False if request.args.get(
-        'use_symbols', default='true').lower() == 'false' else True
+        'use_symbols', default='true').lower() in ('false', '0') else True
     use_uppercase = False if request.args.get(
-        'use_uppercase', default='true').lower() == 'false' else True
+        'use_uppercase', default='true').lower() in ('false', '0') else True
     use_lowercase = False if request.args.get(
-        'use_lowercase', default='true').lower() == 'false' else True
+        'use_lowercase', default='true').lower() in ('false', '0') else True
 
     if count < 1:
         return 'Bad Request. count should not be less than 1.', 400
