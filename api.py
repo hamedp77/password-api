@@ -40,9 +40,12 @@ def default():
         'use_lowercase', default='true').lower() == 'false' else True
 
     for _ in range(count):
-        pw.append(generate_password(length, use_digits,
-                                    use_symbols, use_uppercase,
-                                    use_lowercase))
+        try:
+            pw.append(generate_password(length, use_digits,
+                                        use_symbols, use_uppercase,
+                                        use_lowercase))
+        except ValueError as e:
+            return 'Bad Request. ' + e, 400
 
     response = {'pws': pw, 'success': True}
 
