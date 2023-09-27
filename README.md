@@ -1,6 +1,6 @@
 # Password Generator API
 
-This is a simple REST API project using the Python framework Flask. The password generator is using my other project which you can find it [here](https://github.com/hamedp77/password-generator.git).
+This is a simple REST API project using the Python framework Flask. The password generator is using my other project, which you can find it [here](https://github.com/hamedp77/password-generator.git).
 
 ## Running the project
 
@@ -31,7 +31,7 @@ You have 2 options to run this project in your own environment:
     docker build . -t password-api
     ```
 
-5. Run the container and publish port `80` of the container to an open port on your local machine e.g. port `5000`:
+5. Run the container and publish port `80` of the container to an open port on your local machine, e.g. port `5000`:
 
    ```shell
    docker run -p 5000:80 password-api
@@ -75,7 +75,7 @@ You have 2 options to run this project in your own environment:
 
    These commands will run the application on `http://localhost:5000` with debug mode enabled.
 
-    **Note:** Using a WSGI server like [gunicorn](https://gunicorn.org/) is the preferred way of running this in a "production" environment. If you have been following along with these steps you have gunicorn already installed. All you have to do is run this command:
+    **Note:** Using a WSGI server like [gunicorn](https://gunicorn.org/) is the preferred way of running this in a "production" environment. If you have been following along with these steps, you have gunicorn already installed. All you have to do is run this command:
 
    ```shell
    gunicorn -b 0.0.0.0:80 api:app
@@ -85,4 +85,4 @@ You have 2 options to run this project in your own environment:
 
 ## Using the API
 
-If you visit the URL of your deployed application you'll be automatically redirected to the documentation page of the API which is a Swagger UI. Here you can see all the details of each endpoint, how you can send requests to them, and the expected responses. You can also try each endpoint using the "try it out" button in your browser.
+If you visit the URL of your deployed application, you'll be automatically redirected to the documentation page of the API, which is a Swagger UI. Here you can see all the details of each endpoint, how you can send requests to them, and the expected responses. You can also try each endpoint using the "try it out" button in your browser.
