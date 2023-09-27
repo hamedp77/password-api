@@ -9,6 +9,8 @@ To customize the length of the password or included characters check the help me
 import random
 import string
 
+MIN_PWD_LENGTH = 6
+
 
 def generate_password(length: int = 8, use_digits: bool = True,
                       use_symbols: bool = True, use_uppercase: bool = True,
@@ -23,8 +25,8 @@ def generate_password(length: int = 8, use_digits: bool = True,
     """
 
     # throw an exception for lengths less than 4
-    if length < 4:
-        raise ValueError('length should not be less than 4.')
+    if length < MIN_PWD_LENGTH:
+        raise ValueError(f'length should not be less than {MIN_PWD_LENGTH}.')
 
     # preparing the source characters based on user input
     source_chars = []
