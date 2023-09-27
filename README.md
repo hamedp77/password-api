@@ -73,7 +73,7 @@ You have 2 options to run this project in your own environment:
    python api.py
    ```
 
-   These commands will run the application on `http://localhost:5000` with debug mode enabled.
+   These commands will run the application on `http://localhost:5000` with debug mode disabled by default. The asiest way to enable debug mode is to set the `FLASK_DEBUG` environment variable to `true`.
 
     **Note:** Using a WSGI server like [gunicorn](https://gunicorn.org/) is the preferred way of running this in a "production" environment. If you have been following along with these steps, you have gunicorn already installed. All you have to do is run this command:
 
