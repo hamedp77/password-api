@@ -29,7 +29,7 @@
                         "name": "length",
                         "schema": {
                             "type": "integer",
-                            "minimum": 4
+                            "minimum": 6
                         },
                         "description": "The lenght of the generated password(s) (Default=8)"
                     },
@@ -127,7 +127,7 @@
                                     },
                                     "example": {
                                         "error": "400 Bad Request",
-                                        "description": "count must be folan",
+                                        "description": "count should not be less than 1.",
                                         "success": false
                                     }
                                 }

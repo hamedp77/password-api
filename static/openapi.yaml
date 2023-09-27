@@ -23,7 +23,7 @@ paths:
           name: length
           schema:
             type: integer
-            minimum: 4
+            minimum: 6
           description: The lenght of the generated password(s) (Default=8)
         - in: query
           name: count
@@ -90,7 +90,7 @@ paths:
                     description: Whether request was successfull
                 example:
                   error: 400 Bad Request
-                  description: count must be folan
+                  description: count should not be less than 1.
                   success: false
 servers:
   - url: http://localhost:5000
