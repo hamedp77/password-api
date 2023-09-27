@@ -39,6 +39,9 @@ def default():
     use_lowercase = False if request.args.get(
         'use_lowercase', default='true').lower() == 'false' else True
 
+    if count < 1:
+        return 'Bad Request. count should not be less than 1.', 400
+
     for _ in range(count):
         try:
             pw.append(generate_password(length, use_digits,
