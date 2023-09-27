@@ -2,7 +2,7 @@
     "openapi": "3.0.0",
     "info": {
         "description": "This API allows you to generate random passwords of various lengths and characters.",
-        "version": "alpha",
+        "version": "1.0.0",
         "title": "Pssword Generator"
     },
     "tags": [
@@ -11,12 +11,12 @@
             "description": "Generate random passwords",
             "externalDocs": {
                 "description": "Find out more",
-                "url": "http://localhost:5000/api/alpha/docs"
+                "url": "http://localhost:5000/api/docs"
             }
         }
     ],
     "paths": {
-        "/api/alpha/generate": {
+        "/api/v1/generate": {
             "get": {
                 "tags": [
                     "generate"

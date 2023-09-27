@@ -25,7 +25,7 @@ def index():
     return redirect(SWAGGER_URL)
 
 
-@app.route('/api/alpha/generate')
+@app.route('/api/v1/generate')
 def default():
     pw = []
     length = request.args.get('length', type=int, default=8)
