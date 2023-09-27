@@ -48,7 +48,7 @@ def default():
                                         use_symbols, use_uppercase,
                                         use_lowercase))
         except ValueError as e:
-            return 'Bad Request. ' + e, 400
+            return 'Bad Request. ' + str(e), 400
 
     response = {'pws': pw, 'success': True}
 
