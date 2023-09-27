@@ -40,7 +40,9 @@ def default():
         'use_lowercase', default='true').lower() in ('false', '0') else True
 
     if count < 1:
-        return 'Bad Request. count should not be less than 1.', 400
+        return {'error': '400 Bad Request',
+                'description': 'count should not be less than 1.',
+                'success': False}, 400
 
     for _ in range(count):
         try:
@@ -48,7 +50,9 @@ def default():
                                         use_symbols, use_uppercase,
                                         use_lowercase))
         except ValueError as e:
-            return 'Bad Request. ' + str(e), 400
+            return {'error': '400 Bad Request',
+                    'description': str(e),
+                    'success': False}, 400
 
     response = {'pws': pw, 'success': True}
 

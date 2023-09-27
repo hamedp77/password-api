@@ -10,7 +10,7 @@ tags:
     description: Generate random passwords
     externalDocs:
       description: Find out more
-      url: "http://localhost:5000/api/docs"
+      url: http://localhost:5000/api/alpha/docs
 paths:
   /api/alpha/generate:
     get:
@@ -23,7 +23,7 @@ paths:
           name: length
           schema:
             type: integer
-            minimum: 4
+            minimum: 6
           description: The lenght of the generated password(s) (Default=8)
         - in: query
           name: count
@@ -52,7 +52,7 @@ paths:
             type: string
           description: Include lowercase letters in the password(s) (Default=true)
       responses:
-        "200":
+        '200':
           description: OK
           content:
             application/json:
@@ -65,12 +65,33 @@ paths:
                   success:
                     type: boolean
                     description: Whether request was successfull
-              example:
-                pws:
-                  - h?U)6gT2r|H[
-                  - B!o@&#!7M4fl
-                  - ;/zTlB}vp3D8
-                success: true
+                example:
+                  pws:
+                    - h?U)6gT2r|H[
+                    - B!o@&#!7M4fl
+                    - ;/zTlB}vp3D8
+                  success: true
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  errors:
+                    type: string
+                    description: List of passwords
+                  description:
+                    type: string
+                    description: List of passwords
+                  success:
+                    type: boolean
+                    default: false
+                    description: Whether request was successfull
+                example:
+                  error: 400 Bad Request
+                  description: count should not be less than 1.
+                  success: false
 servers:
-  - url: "http://localhost:5000"
-  - url: "http://127.0.0.1:5000"
+  - url: http://localhost:5000
+  - url: http://127.0.0.1:5000
