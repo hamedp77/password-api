@@ -15,9 +15,9 @@ You have 2 options to run this project in your own environment:
 
 2. Clone the repository:
 
-    ```shell
-    git clone https://github.com/hamedp77/password-api.git
-    ```
+   ```shell
+   git clone https://github.com/hamedp77/password-api.git
+   ```
 
 3. Make sure you're in the root directory of the project:
 
@@ -27,11 +27,11 @@ You have 2 options to run this project in your own environment:
 
 4. Build the docker image and tag it:
 
-    ```shell
-    docker build . -t password-api
-    ```
+   ```shell
+   docker build . -t password-api
+   ```
 
-5. Run the container and publish port `80` of the container to an open port on your local machine, e.g. port `5000`:
+5. Run the container and publish port `80` of the container to an open port on your local machine, e.g., port `5000`:
 
    ```shell
    docker run -p 5000:80 password-api
@@ -45,9 +45,9 @@ You have 2 options to run this project in your own environment:
 
 2. Clone the repository:
 
-    ```shell
-    git clone https://github.com/hamedp77/password-api.git
-    ```
+   ```shell
+   git clone https://github.com/hamedp77/password-api.git
+   ```
 
 3. Make sure you're in the root directory of the project:
 
@@ -55,13 +55,13 @@ You have 2 options to run this project in your own environment:
    cd password-api
    ```
 
-4. Installe dependencies:
+4. Install dependencies:
 
    ```shell
    pip install -r requirements.txt
    ```
 
-5. To run in a "development" environemt you can use:
+5. To run in a "development" environment you can use:
 
    ```shell
    flask --app api run
