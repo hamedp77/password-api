@@ -78,19 +78,15 @@ paths:
               schema:
                 type: object
                 properties:
-                  errors:
+                  message:
                     type: string
-                    description: List of passwords
-                  description:
-                    type: string
-                    description: List of passwords
+                    description: Error message
                   success:
                     type: boolean
                     default: false
                     description: Whether request was successfull
                 example:
-                  error: 400 Bad Request
-                  description: count should not be less than 1.
+                  message: count should not be less than 1.
                   success: false
 servers:
   - url: http://localhost:5000

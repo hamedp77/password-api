@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect
+from flask import Flask, redirect, request
 from flask_swagger_ui import get_swaggerui_blueprint
 
 from generator import generate_password
@@ -40,8 +40,7 @@ def default():
         'use_lowercase', default='true').lower() in ('false', '0') else True
 
     if count < 1:
-        return {'error': '400 Bad Request',
-                'description': 'count should not be less than 1.',
+        return {'message': 'count should not be less than 1.',
                 'success': False}, 400
 
     for _ in range(count):
@@ -50,8 +49,7 @@ def default():
                                         use_symbols, use_uppercase,
                                         use_lowercase))
         except ValueError as e:
-            return {'error': '400 Bad Request',
-                    'description': str(e),
+            return {'message': str(e),
                     'success': False}, 400
 
     response = {'pws': pw, 'success': True}
