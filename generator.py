@@ -101,10 +101,10 @@ def check_min_symbols(password: str) -> bool:
     return any(char in string.punctuation for char in password)
 
 
-def main():
+def main() -> None:
     """main function
 
-    Argument parsing and calling the password generator function for the CLI happens here. 
+    Argument parsing and calling the password generator function for the CLI happens here.
     This way, the whole script can be imported and used as a module.
     """
 
